@@ -16,35 +16,30 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      top: false,
-      left: false,
-      right: false,
-      child: Scaffold(
-        appBar: AppBar(title: Text('Main Screen')),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              buttonTile(context, "Day 1", StlExample()),
-              buttonTile(context, "Day 2", CounterApp()),
-              buttonTile(context, "Day 3", UserForm()),
-              buttonTile(context, "Day 4", ListBuilder()),
-              buttonTile(context, "Day 5", LifeCycle()),
-              buttonTile(context, "Day 6", Calculator()),
-              buttonTile(context, "Day 7", ScreenOne()),
-              buttonTileNamed(context, "Day 8", '/first'),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                spacing: 10,
-                children: [
-                  buttonTile(context, "Day 9 - 1", Screen1()),
-                  buttonTile(context, "Day 9 - 2", TabBarExample()),
-                ],
-              ),
-              buttonTile(context, "Extra", DrawerExample()),
-            ],
-          ),
+    return Scaffold(
+      appBar: AppBar(title: Text('Main Screen')),
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            buttonTile(context, "Day 1", StlExample()),
+            buttonTile(context, "Day 2", CounterApp()),
+            buttonTile(context, "Day 3", UserForm()),
+            buttonTile(context, "Day 4", ListBuilder()),
+            buttonTile(context, "Day 5", LifeCycle()),
+            buttonTile(context, "Day 6", Calculator()),
+            buttonTile(context, "Day 7", ScreenOne()),
+            buttonTileNamed(context, "Day 8", '/first'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 10,
+              children: [
+                buttonTile(context, "Day 9 - 1", Screen1()),
+                buttonTile(context, "Day 9 - 2", TabBarExample()),
+              ],
+            ),
+            buttonTile(context, "Extra", DrawerExample()),
+          ],
         ),
       ),
     );

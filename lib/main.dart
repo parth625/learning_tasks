@@ -4,12 +4,18 @@ import 'package:demo_app/day7/screen_three.dart';
 import 'package:demo_app/day7/screen_two.dart';
 import 'package:demo_app/day8/first.dart';
 import 'package:demo_app/day8/third.dart';
+import 'package:demo_app/firebase_options.dart';
 import 'package:demo_app/main_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
 import 'day8/second.dart';
 
-void main() {
+Future<void> main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(DemoApp());
 }
 
@@ -23,6 +29,7 @@ class DemoApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        useMaterial3: false,
       ),
       initialRoute: '/',
       routes: {
