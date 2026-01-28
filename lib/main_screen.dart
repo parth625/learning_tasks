@@ -9,6 +9,7 @@ import 'package:demo_app/nav_bar/drawer_example.dart';
 import 'package:demo_app/nav_bar/tab_bar_example.dart';
 import 'package:flutter/material.dart';
 
+import 'day11_provider/provider_counter_app.dart';
 import 'day7/screen_one.dart';
 
 class MainScreen extends StatelessWidget {
@@ -38,7 +39,8 @@ class MainScreen extends StatelessWidget {
                 buttonTile(context, "Day 9 - 2", TabBarExample()),
               ],
             ),
-            buttonTile(context, "Extra", DrawerExample()),
+            buttonTile(context, "Navigation", DrawerExample()),
+            buttonTile(context, "Provider", ProviderCounterApp()),
           ],
         ),
       ),
